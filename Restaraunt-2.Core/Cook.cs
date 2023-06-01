@@ -23,7 +23,7 @@ namespace Restaraunt_2.Core
         public string Inspect(EggOrder egg) => egg.GetQuality().ToString();
     }
 
-    public class MyCook
+    public class MyCook //By Dilshod aka
     {
 
         public Order SubmitRequest(MenuItem menuItem, int quantity) 

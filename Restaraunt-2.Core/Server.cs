@@ -5,7 +5,6 @@ namespace Restaraunt_2.Core
     {
         private MenuItem[][] orders = new MenuItem[0][];
         private OrderStatus? _orderStatus = null;
-       // private int _iterator = 0; // Buni urniga massivdan colichestvani ol 
         int _totalEggs = 0;
         int _totalChickens = 0;
         private MyCook _cook = new MyCook();
@@ -13,26 +12,30 @@ namespace Restaraunt_2.Core
         EggOrder eggOrder = null;
 
 
-        public void Receive(int amountChicken, int amountEgg, MenuItem drink) //
+        public void Receive(int amountChicken, int amountEgg, MenuItem drink)
         {
-            if (orders.Length > 7) throw new Exception("You can make only 8 orders for 1 table!");
-            if(_orderStatus == OrderStatus.SentToCook) orders = new MenuItem[0][];
+            if (orders.Length > 7)
+                throw new Exception("You can make only 8 orders for 1 table!");
+
+            if (_orderStatus == OrderStatus.SentToCook)
+                throw new Exception("The order is ready, it remains to serve!");
 
             _totalChickens += amountChicken;
             _totalEggs += amountEgg;
 
             Array.Resize(ref orders, orders.Length + 1);
             orders[orders.Length - 1] = FillOrders(amountChicken, amountEgg, drink);
-            
+
             _orderStatus = OrderStatus.Received;
         }
 
         public string Send()
         {
-            //Null tekshirish urniga enum ishlat 
-            if (_orderStatus == OrderStatus.SentToCook) throw new Exception("Already sent for cooking!");
+            if (_orderStatus == OrderStatus.SentToCook)
+                throw new Exception("Already sent for cooking!");
 
-            if (_orderStatus != OrderStatus.Received) throw new Exception("First make an order!");
+            if (_orderStatus != OrderStatus.Received)
+                throw new Exception("First make an order!");
 
             chickenOrder = (_cook.SubmitRequest(MenuItem.Chicken, _totalChickens) as ChickenOrder)!;
             _cook.PrepareFood(chickenOrder);
@@ -49,7 +52,8 @@ namespace Restaraunt_2.Core
         public string[] Serve()
         {
             //This method should be called only once 
-            switch (_orderStatus) {
+            switch (_orderStatus)
+            {
                 case null: throw new Exception("First make an order!");
                 case OrderStatus.Received: throw new Exception("First send an order to the cook!");
                 case OrderStatus.Served: throw new Exception("Already served!");
@@ -59,17 +63,18 @@ namespace Restaraunt_2.Core
             string[] preparedOrdersResult = new string[orders.Length];
             while (chickenOrder.GetQuantity() != 0 && eggOrder.GetQuantity() != 0)
             {
-                for (int j = 0; j < orders[i].Length; j++) {
+                for (int j = 0; j < orders[i].Length; j++)
+                {
                     if (orders[i][j] is MenuItem.Chicken) chickenCount++;
                     else if (orders[i][j] is MenuItem.Egg) eggCount++;
                 }
-    
+
                 eggOrder.SubtactQuantity(eggCount);
                 chickenOrder.SubtactQuantity(chickenCount);
                 preparedOrdersResult[i] = $"Customer {i} is served {chickenCount} chicken, {eggCount} egg, {orders[i][orders[i++].Length - 1]}.";
                 chickenCount = 0;
                 eggCount = 0;
-                
+
             }
 
             orders = new MenuItem[0][];
@@ -78,10 +83,9 @@ namespace Restaraunt_2.Core
         }
         private enum OrderStatus
         {
-           Received,
-           SentToCook,
-           Served,
-         //  None
+            Received,
+            SentToCook,
+            Served,
         }
 
         private MenuItem[] FillOrders(int amountChicken, int amountEgg, MenuItem Drink)

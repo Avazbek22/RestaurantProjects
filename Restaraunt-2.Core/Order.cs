@@ -7,7 +7,7 @@ namespace Restaraunt_2
         public Order(int quantity)
         {
             if (quantity < 0)
-                throw new InvalidOperationException("You can't make order less than 1");
+                throw new InvalidOperationException("Order quantity can't be less than 1");
 
             _quantity = quantity;
         }

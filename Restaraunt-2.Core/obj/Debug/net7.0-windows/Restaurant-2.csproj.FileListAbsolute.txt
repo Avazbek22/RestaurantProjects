@@ -1,0 +1,17 @@
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\bin\Debug\net7.0-windows\Restaurant-2.exe
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\bin\Debug\net7.0-windows\Restaurant-2.deps.json
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\bin\Debug\net7.0-windows\Restaurant-2.runtimeconfig.json
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\bin\Debug\net7.0-windows\Restaurant-2.dll
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\bin\Debug\net7.0-windows\Restaurant-2.pdb
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\obj\Debug\net7.0-windows\Restaurant-2.csproj.AssemblyReference.cache
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\obj\Debug\net7.0-windows\Restaraunt_2.Core.Form1.resources
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\obj\Debug\net7.0-windows\Restaurant-2.csproj.GenerateResource.cache
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\obj\Debug\net7.0-windows\Restaurant-2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\obj\Debug\net7.0-windows\Restaurant-2.AssemblyInfoInputs.cache
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\obj\Debug\net7.0-windows\Restaurant-2.AssemblyInfo.cs
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\obj\Debug\net7.0-windows\Restaurant-2.csproj.CoreCompileInputs.cache
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\obj\Debug\net7.0-windows\Restaurant-2.dll
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\obj\Debug\net7.0-windows\refint\Restaurant-2.dll
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\obj\Debug\net7.0-windows\Restaurant-2.pdb
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\obj\Debug\net7.0-windows\Restaurant-2.genruntimeconfig.cache
+C:\Users\avazb\Source\Repos\Avazbek22\RestaurantProjects\Restaraunt-2.Core\obj\Debug\net7.0-windows\ref\Restaurant-2.dll
