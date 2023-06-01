@@ -3,23 +3,24 @@ namespace Restaraunt_2.Core
 {
     public class Cook
     {
-        public Order SubmitRequest(MenuItem menuItem, int quantity) //
+        public Order SubmitRequest(MenuItem menuItem, int quantity) 
         {
-            if (menuItem == MenuItem.Chicken) return new ChickenOrder(quantity);
+            Order order = null;
+            if (menuItem == MenuItem.Chicken) 
+                order = new ChickenOrder(quantity);
 
-            if (menuItem == MenuItem.Egg) return new EggOrder(quantity);
+            else if (menuItem == MenuItem.Egg) 
+                order = new EggOrder(quantity);
 
-            else throw new ArgumentException("Wrong order type!");
+            else 
+                throw new ArgumentException("Wrong order type!");
+
+            return order;
         }
 
-        public void PrepareFood(Order order) 
-        {
-            if (order is ChickenOrder chicken) chicken.Cook();
-
-            else if (order is EggOrder egg) egg.Cook();
-        }
+        public void PrepareFood(Order order) => order.Cook();
  
-        public string Inspect(EggOrder egg) => (egg.GetQuantity() > 0) ? egg.GetQuality().ToString() : string.Empty;
+        public string Inspect(EggOrder egg) => egg.GetQuality().ToString();
     }
 
     public class MyCook
